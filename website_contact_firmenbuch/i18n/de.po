@@ -1,0 +1,420 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* website_contact_firmenbuch
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 19.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-11-08 19:11+0000\n"
+"PO-Revision-Date: 2026-11-08 19:11+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: de\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: website_contact_firmenbuch
+#: model_terms:ir.ui.view,arch_db:website_contact_firmenbuch.contact_form
+msgid ""
+"<strong>Thank you!</strong> Your message has reached us. We will get back to"
+" you as soon as possible."
+msgstr ""
+"<strong>Vielen Dank!</strong> Ihre Nachricht ist bei uns angekommen. Wir "
+"melden uns so schnell wie möglich."
+
+#. module: website_contact_firmenbuch
+#. odoo-python
+#: code:addons/website_contact_firmenbuch/models/contact_request.py:0
+msgid "A visitor sent the contact form of the website."
+msgstr "Ein Besucher hat das Kontaktformular der Webseite abgeschickt."
+
+#. module: website_contact_firmenbuch
+#. odoo-python
+#: code:addons/website_contact_firmenbuch/models/contact_request.py:0
+msgid "Address"
+msgstr "Adresse"
+
+#. module: website_contact_firmenbuch
+#: model_terms:ir.ui.view,arch_db:website_contact_firmenbuch.contact_form
+msgid "Change"
+msgstr "Ändern"
+
+#. module: website_contact_firmenbuch
+#. odoo-python
+#: code:addons/website_contact_firmenbuch/models/contact_request.py:0
+msgid "Check the register status"
+msgstr "Firmenbuchstatus prüfen"
+
+#. module: website_contact_firmenbuch
+#: model_terms:ir.ui.view,arch_db:website_contact_firmenbuch.contact_form
+msgid "Chosen company:"
+msgstr "Gewählte Firma:"
+
+#. module: website_contact_firmenbuch
+#. odoo-python
+#: code:addons/website_contact_firmenbuch/models/contact_request.py:0
+msgid "Company (entered)"
+msgstr "Firma (eingegeben)"
+
+#. module: website_contact_firmenbuch
+#. odoo-python
+#: code:addons/website_contact_firmenbuch/models/contact_request.py:0
+msgid "Company (register)"
+msgstr "Firma (Firmenbuch)"
+
+#. module: website_contact_firmenbuch
+#: model_terms:ir.ui.view,arch_db:website_contact_firmenbuch.contact_form
+msgid "Company name *"
+msgstr "Firmenname *"
+
+#. module: website_contact_firmenbuch
+#: model:ir.model,name:website_contact_firmenbuch.model_website_contact_firmenbuch
+msgid "Contact form with business register check"
+msgstr "Kontaktformular mit Firmenbuchprüfung"
+
+#. module: website_contact_firmenbuch
+#. odoo-python
+#: code:addons/website_contact_firmenbuch/models/contact_request.py:0
+msgid "Court"
+msgstr "Gericht"
+
+#. module: website_contact_firmenbuch
+#: model:ir.model.fields,field_description:website_contact_firmenbuch.field_website_contact_nonce__create_uid
+msgid "Created by"
+msgstr "Erstellt von"
+
+#. module: website_contact_firmenbuch
+#: model:ir.model.fields,field_description:website_contact_firmenbuch.field_website_contact_nonce__create_date
+msgid "Created on"
+msgstr "Erstellt am"
+
+#. module: website_contact_firmenbuch
+#: model:ir.model.fields,field_description:website_contact_firmenbuch.field_website_contact_firmenbuch__display_name
+#: model:ir.model.fields,field_description:website_contact_firmenbuch.field_website_contact_nonce__display_name
+msgid "Display Name"
+msgstr "Anzeigename"
+
+#. module: website_contact_firmenbuch
+#. odoo-python
+#: code:addons/website_contact_firmenbuch/models/contact_request.py:0
+msgid "Email"
+msgstr "E-Mail"
+
+#. module: website_contact_firmenbuch
+#: model_terms:ir.ui.view,arch_db:website_contact_firmenbuch.contact_form
+msgid "Email *"
+msgstr "E-Mail *"
+
+#. module: website_contact_firmenbuch
+#: model_terms:ir.ui.view,arch_db:website_contact_firmenbuch.contact_form
+msgid "First name *"
+msgstr "Vorname *"
+
+#. module: website_contact_firmenbuch
+#: model_terms:ir.ui.view,arch_db:website_contact_firmenbuch.contact_form
+msgid ""
+"I agree that my data are stored and used to answer my request (see the data "
+"protection information on this page). *"
+msgstr ""
+"Ich bin damit einverstanden, dass meine Daten gespeichert und zur "
+"Beantwortung meiner Anfrage verwendet werden (siehe Datenschutzhinweis auf "
+"dieser Seite). *"
+
+#. module: website_contact_firmenbuch
+#: model:ir.model.fields,field_description:website_contact_firmenbuch.field_website_contact_firmenbuch__id
+#: model:ir.model.fields,field_description:website_contact_firmenbuch.field_website_contact_nonce__id
+msgid "ID"
+msgstr "ID"
+
+#. module: website_contact_firmenbuch
+#: model:ir.model.fields,field_description:website_contact_firmenbuch.field_website_contact_nonce__write_uid
+msgid "Last Updated by"
+msgstr "Zuletzt aktualisiert von"
+
+#. module: website_contact_firmenbuch
+#: model:ir.model.fields,field_description:website_contact_firmenbuch.field_website_contact_nonce__write_date
+msgid "Last Updated on"
+msgstr "Zuletzt aktualisiert am"
+
+#. module: website_contact_firmenbuch
+#: model_terms:ir.ui.view,arch_db:website_contact_firmenbuch.contact_form
+msgid "Last name *"
+msgstr "Nachname *"
+
+#. module: website_contact_firmenbuch
+#: model_terms:ir.ui.view,arch_db:website_contact_firmenbuch.contact_form
+msgid "Leave this field empty"
+msgstr "Dieses Feld bitte leer lassen"
+
+#. module: website_contact_firmenbuch
+#. odoo-python
+#: code:addons/website_contact_firmenbuch/models/contact_request.py:0
+msgid "Legal form"
+msgstr "Rechtsform"
+
+#. module: website_contact_firmenbuch
+#. odoo-python
+#: code:addons/website_contact_firmenbuch/models/contact_request.py:0
+msgid "Managing directors"
+msgstr "Geschäftsführer"
+
+#. module: website_contact_firmenbuch
+#: model_terms:ir.ui.view,arch_db:website_contact_firmenbuch.contact_form
+msgid "My company is not listed in the Austrian business register"
+msgstr "Meine Firma ist nicht im österreichischen Firmenbuch eingetragen"
+
+#. module: website_contact_firmenbuch
+#. odoo-python
+#: code:addons/website_contact_firmenbuch/models/contact_request.py:0
+msgid "Name"
+msgstr "Name"
+
+#. module: website_contact_firmenbuch
+#. odoo-python
+#: code:addons/website_contact_firmenbuch/models/contact_request.py:0
+msgid "Name found among managing directors"
+msgstr "Name unter den Geschäftsführern gefunden"
+
+#. module: website_contact_firmenbuch
+#: model_terms:ir.ui.view,arch_db:website_contact_firmenbuch.contact_form
+msgid "New puzzle"
+msgstr "Neues Rätsel"
+
+#. module: website_contact_firmenbuch
+#: model_terms:ir.ui.view,arch_db:website_contact_firmenbuch.contact_form
+msgid ""
+"No company found. Please check the spelling (the register searches for the "
+"beginning of the name) or tick the box below."
+msgstr ""
+"Keine Firma gefunden. Bitte prüfen Sie die Schreibweise (das Firmenbuch "
+"sucht nach dem Namensanfang) oder setzen Sie das Häkchen unten."
+
+#. module: website_contact_firmenbuch
+#: model:ir.model.fields,field_description:website_contact_firmenbuch.field_website_contact_nonce__nonce
+msgid "Nonce"
+msgstr "Einmalwert"
+
+#. module: website_contact_firmenbuch
+#. odoo-python
+#: code:addons/website_contact_firmenbuch/models/contact_request.py:0
+msgid "Open the company"
+msgstr "Firma öffnen"
+
+#. module: website_contact_firmenbuch
+#. odoo-python
+#: code:addons/website_contact_firmenbuch/models/contact_request.py:0
+msgid "Open the opportunity"
+msgstr "Verkaufschance öffnen"
+
+#. module: website_contact_firmenbuch
+#. odoo-python
+#: code:addons/website_contact_firmenbuch/models/contact_request.py:0
+#: model_terms:ir.ui.view,arch_db:website_contact_firmenbuch.contact_form
+msgid "Phone"
+msgstr "Telefon"
+
+#. module: website_contact_firmenbuch
+#: model_terms:ir.ui.view,arch_db:website_contact_firmenbuch.contact_form
+msgid "Please agree to the data processing."
+msgstr "Bitte stimmen Sie der Datenverarbeitung zu."
+
+#. module: website_contact_firmenbuch
+#: model_terms:ir.ui.view,arch_db:website_contact_firmenbuch.contact_form
+msgid ""
+"Please choose your company from the list or tick the box that it is not "
+"listed."
+msgstr ""
+"Bitte wählen Sie Ihre Firma aus der Liste oder setzen Sie das Häkchen, dass "
+"sie nicht eingetragen ist."
+
+#. module: website_contact_firmenbuch
+#: model_terms:ir.ui.view,arch_db:website_contact_firmenbuch.contact_form
+msgid "Please choose your company:"
+msgstr "Bitte wählen Sie Ihre Firma:"
+
+#. module: website_contact_firmenbuch
+#: model_terms:ir.ui.view,arch_db:website_contact_firmenbuch.contact_form
+msgid "Please describe your request in a few words."
+msgstr "Bitte beschreiben Sie Ihr Anliegen in einigen Worten."
+
+#. module: website_contact_firmenbuch
+#: model_terms:ir.ui.view,arch_db:website_contact_firmenbuch.contact_form
+msgid "Please enter a valid email address."
+msgstr "Bitte geben Sie eine gültige E-Mail-Adresse ein."
+
+#. module: website_contact_firmenbuch
+#: model_terms:ir.ui.view,arch_db:website_contact_firmenbuch.contact_form
+msgid "Please enter your first name, last name and company name."
+msgstr "Bitte geben Sie Vorname, Nachname und Firmenname ein."
+
+#. module: website_contact_firmenbuch
+#: model_terms:ir.ui.view,arch_db:website_contact_firmenbuch.contact_form
+msgid "Puzzle: please solve it before sending *"
+msgstr "Rätsel: Bitte vor dem Absenden lösen *"
+
+#. module: website_contact_firmenbuch
+#. odoo-python
+#: code:addons/website_contact_firmenbuch/models/contact_request.py:0
+#: model_terms:ir.ui.view,arch_db:website_contact_firmenbuch.contact_form
+msgid "Register number"
+msgstr "Firmenbuchnummer"
+
+#. module: website_contact_firmenbuch
+#. odoo-python
+#: code:addons/website_contact_firmenbuch/models/contact_request.py:0
+msgid "Register status"
+msgstr "Firmenbuchstatus"
+
+#. module: website_contact_firmenbuch
+#: model_terms:ir.ui.view,arch_db:website_contact_firmenbuch.contact_form
+msgid "Searching the business register…"
+msgstr "Das Firmenbuch wird durchsucht …"
+
+#. module: website_contact_firmenbuch
+#: model_terms:ir.ui.view,arch_db:website_contact_firmenbuch.contact_form
+msgid "Seat"
+msgstr "Sitz"
+
+#. module: website_contact_firmenbuch
+#: model_terms:ir.ui.view,arch_db:website_contact_firmenbuch.contact_form
+msgid "Send message"
+msgstr "Nachricht senden"
+
+#. module: website_contact_firmenbuch
+#: model_terms:ir.ui.view,arch_db:website_contact_firmenbuch.contact_form
+msgid "Send us a message"
+msgstr "Schreiben Sie uns"
+
+#. module: website_contact_firmenbuch
+#: model_terms:ir.ui.view,arch_db:website_contact_firmenbuch.contact_form
+msgid ""
+"That was a bit quick. Please check your entries and try again in a few "
+"seconds."
+msgstr ""
+"Das ging etwas schnell. Bitte prüfen Sie Ihre Angaben und versuchen Sie es "
+"in einigen Sekunden erneut."
+
+#. module: website_contact_firmenbuch
+#: model_terms:ir.ui.view,arch_db:website_contact_firmenbuch.contact_form
+msgid "The answer to the puzzle is wrong. A new puzzle is shown."
+msgstr ""
+"Die Antwort auf das Rätsel ist falsch. Es wird ein neues Rätsel angezeigt."
+
+#. module: website_contact_firmenbuch
+#: model_terms:ir.ui.view,arch_db:website_contact_firmenbuch.contact_form
+msgid ""
+"The business register does not answer at the moment. Please tick “My company"
+" is not listed” or try again later."
+msgstr ""
+"Das Firmenbuch antwortet derzeit nicht. Bitte setzen Sie das Häkchen „Meine "
+"Firma ist nicht eingetragen“ oder versuchen Sie es später erneut."
+
+#. module: website_contact_firmenbuch
+#. odoo-python
+#: code:addons/website_contact_firmenbuch/models/contact_request.py:0
+msgid "The business register is not available at the moment."
+msgstr "Das Firmenbuch ist derzeit nicht erreichbar."
+
+#. module: website_contact_firmenbuch
+#: model_terms:ir.ui.view,arch_db:website_contact_firmenbuch.contact_form
+msgid "The phone number may only contain digits and + ( ) / . - and spaces."
+msgstr ""
+"Die Telefonnummer darf nur Ziffern, + ( ) / . - und Leerzeichen enthalten."
+
+#. module: website_contact_firmenbuch
+#: model_terms:ir.ui.view,arch_db:website_contact_firmenbuch.contact_form
+msgid "The puzzle has expired. A new one is shown, please solve it."
+msgstr ""
+"Das Rätsel ist abgelaufen. Es wird ein neues angezeigt, bitte lösen Sie es."
+
+#. module: website_contact_firmenbuch
+#: model:ir.model.constraint,message:website_contact_firmenbuch.constraint_website_contact_nonce_nonce_unique
+msgid "The puzzle was already used."
+msgstr "Das Rätsel wurde bereits verwendet."
+
+#. module: website_contact_firmenbuch
+#. odoo-python
+#: code:addons/website_contact_firmenbuch/models/contact_request.py:0
+msgid "The visitor is not listed in the Austrian business register"
+msgstr "Der Besucher ist nicht im österreichischen Firmenbuch eingetragen"
+
+#. module: website_contact_firmenbuch
+#: model_terms:ir.ui.view,arch_db:website_contact_firmenbuch.contact_form
+msgid "Too many requests. Please try again later."
+msgstr "Zu viele Anfragen. Bitte versuchen Sie es später erneut."
+
+#. module: website_contact_firmenbuch
+#: model:ir.model,name:website_contact_firmenbuch.model_website_contact_nonce
+msgid "Used contact form puzzle"
+msgstr "Verwendetes Kontaktformular-Rätsel"
+
+#. module: website_contact_firmenbuch
+#: model_terms:ir.ui.view,arch_db:website_contact_firmenbuch.contact_form
+msgid ""
+"We look your company up in the Austrian business register (Firmenbuch). "
+"Please choose it from the list."
+msgstr ""
+"Wir suchen Ihre Firma im österreichischen Firmenbuch. Bitte wählen Sie sie "
+"aus der Liste."
+
+#. module: website_contact_firmenbuch
+#. odoo-python
+#: code:addons/website_contact_firmenbuch/models/contact_request.py:0
+msgid "Website enquiry: %(company)s - %(name)s"
+msgstr "Webseiten-Anfrage: %(company)s - %(name)s"
+
+#. module: website_contact_firmenbuch
+#: model_terms:ir.ui.view,arch_db:website_contact_firmenbuch.contact_form
+msgid ""
+"Without register entry we cannot verify your company, but we will gladly "
+"answer your message."
+msgstr ""
+"Ohne Firmenbucheintrag können wir Ihre Firma nicht prüfen, beantworten Ihre "
+"Nachricht aber gerne."
+
+#. module: website_contact_firmenbuch
+#: model_terms:ir.ui.view,arch_db:website_contact_firmenbuch.contact_form
+msgid "Your message *"
+msgstr "Ihre Nachricht *"
+
+#. module: website_contact_firmenbuch
+#: model_terms:ir.ui.view,arch_db:website_contact_firmenbuch.contact_form
+msgid "Your message could not be sent."
+msgstr "Ihre Nachricht konnte nicht gesendet werden."
+
+#. module: website_contact_firmenbuch
+#: model_terms:ir.ui.view,arch_db:website_contact_firmenbuch.contact_form
+msgid ""
+"Your message could not be sent. Please try again later or write to us by "
+"email."
+msgstr ""
+"Ihre Nachricht konnte nicht gesendet werden. Bitte versuchen Sie es später "
+"erneut oder schreiben Sie uns per E-Mail."
+
+#. module: website_contact_firmenbuch
+#. odoo-python
+#: code:addons/website_contact_firmenbuch/models/contact_request.py:0
+msgid "first_name"
+msgstr "Vorname"
+
+#. module: website_contact_firmenbuch
+#. odoo-python
+#: code:addons/website_contact_firmenbuch/models/contact_request.py:0
+msgid "no"
+msgstr "nein"
+
+#. module: website_contact_firmenbuch
+#. odoo-python
+#: code:addons/website_contact_firmenbuch/models/contact_request.py:0
+msgid "the register could not be read, the number is not verified"
+msgstr ""
+"das Firmenbuch konnte nicht gelesen werden, die Nummer ist nicht geprüft"
+
+#. module: website_contact_firmenbuch
+#. odoo-python
+#: code:addons/website_contact_firmenbuch/models/contact_request.py:0
+msgid "yes"
+msgstr "ja"

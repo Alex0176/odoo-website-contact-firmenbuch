@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- Use it in a page with <t t-call="website_contact_firmenbuch.contact_form"/> -->
+    <template id="contact_form" name="Contact form with business register check">
+        <div id="bc_contact" class="bc-contact mt-5" data-base="/biricon/kontakt">
+            <style><![CDATA[
+                .bc-contact .bc-hp{position:absolute;left:-10000px;top:auto;width:1px;height:1px;overflow:hidden}
+                .bc-contact .bc-hit{cursor:pointer}
+                .bc-contact .bc-puzzle-q{font-family:monospace;font-size:1.25rem;letter-spacing:.05em}
+            ]]></style>
+            <h2 class="h3">Send us a message</h2>
+            <form class="bc-form" novalidate="novalidate" autocomplete="off">
+                <div class="row g-3">
+                    <div class="col-md-6">
+                        <label class="form-label" for="bc_first_name">First name *</label>
+                        <input type="text" id="bc_first_name" name="first_name" class="form-control" maxlength="80" required="required" autocomplete="given-name"/>
+                    </div>
+                    <div class="col-md-6">
+                        <label class="form-label" for="bc_last_name">Last name *</label>
+                        <input type="text" id="bc_last_name" name="last_name" class="form-control" maxlength="80" required="required" autocomplete="family-name"/>
+                    </div>
+                    <div class="col-12">
+                        <label class="form-label" for="bc_company">Company name *</label>
+                        <input type="text" id="bc_company" name="company" class="form-control" maxlength="150" required="required" autocomplete="organization"/>
+                        <div class="form-text">We look your company up in the Austrian business register (Firmenbuch). Please choose it from the list.</div>
+                        <div class="bc-state small mt-2" aria-live="polite"></div>
+                        <div class="bc-hits list-group mt-2" hidden="hidden"></div>
+                        <div class="form-check mt-2">
+                            <input type="checkbox" id="bc_no_register" name="no_register" class="form-check-input"/>
+                            <label class="form-check-label" for="bc_no_register">My company is not listed in the Austrian business register</label>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <label class="form-label" for="bc_email">Email *</label>
+                        <input type="email" id="bc_email" name="email" class="form-control" maxlength="150" required="required" autocomplete="email"/>
+                    </div>
+                    <div class="col-md-6">
+                        <label class="form-label" for="bc_phone">Phone</label>
+                        <input type="tel" id="bc_phone" name="phone" class="form-control" maxlength="40" autocomplete="tel"/>
+                    </div>
+                    <div class="col-12">
+                        <label class="form-label" for="bc_message">Your message *</label>
+                        <textarea id="bc_message" name="message" class="form-control" rows="6" maxlength="5000" required="required"></textarea>
+                    </div>
+                    <div class="bc-hp" aria-hidden="true">
+                        <label for="bc_hp">Leave this field empty</label>
+                        <input type="text" id="bc_hp" name="hp" tabindex="-1" autocomplete="off"/>
+                    </div>
+                    <div class="col-12">
+                        <div class="form-check">
+                            <input type="checkbox" id="bc_consent" name="consent" class="form-check-input" required="required"/>
+                            <label class="form-check-label" for="bc_consent">I agree that my data are stored and used to answer my request (see the data protection information on this page). *</label>
+                        </div>
+                    </div>
+                    <div class="col-12">
+                        <label class="form-label" for="bc_answer">Puzzle: please solve it before sending *</label>
+                        <div class="d-flex align-items-center gap-3 flex-wrap">
+                            <span class="bc-puzzle-q" aria-live="polite" t-translation="off">…</span>
+                            <input type="text" id="bc_answer" name="answer" class="form-control" style="max-width:8rem" inputmode="numeric" maxlength="7" required="required" autocomplete="off"/>
+                            <button type="button" class="btn btn-link bc-new-puzzle">New puzzle</button>
+                        </div>
+                    </div>
+                    <div class="col-12">
+                        <div class="bc-error alert alert-danger" role="alert" hidden="hidden"></div>
+                        <button type="submit" class="btn btn-primary btn-lg bc-send">Send message</button>
+                    </div>
+                </div>
+            </form>
+            <div class="bc-done alert alert-success" role="status" hidden="hidden">
+                <strong>Thank you!</strong> Your message has reached us. We will get back to you as soon as possible.
+            </div>
+            <div hidden="hidden" class="bc-messages">
+                <div data-msg="missing_name">Please enter your first name, last name and company name.</div>
+                <div data-msg="bad_email">Please enter a valid email address.</div>
+                <div data-msg="bad_phone">The phone number may only contain digits and + ( ) / . - and spaces.</div>
+                <div data-msg="message_short">Please describe your request in a few words.</div>
+                <div data-msg="no_consent">Please agree to the data processing.</div>
+                <div data-msg="no_company_choice">Please choose your company from the list or tick the box that it is not listed.</div>
+                <div data-msg="puzzle_expired">The puzzle has expired. A new one is shown, please solve it.</div>
+                <div data-msg="puzzle_wrong">The answer to the puzzle is wrong. A new puzzle is shown.</div>
+                <div data-msg="too_fast">That was a bit quick. Please check your entries and try again in a few seconds.</div>
+                <div data-msg="rate_limit">Too many requests. Please try again later.</div>
+                <div data-msg="register_down">The business register does not answer at the moment. Please tick “My company is not listed” or try again later.</div>
+                <div data-msg="failed">Your message could not be sent. Please try again later or write to us by email.</div>
+                <div data-msg="spam">Your message could not be sent.</div>
+                <div data-msg="searching">Searching the business register…</div>
+                <div data-msg="no_hits">No company found. Please check the spelling (the register searches for the beginning of the name) or tick the box below.</div>
+                <div data-msg="choose">Please choose your company:</div>
+                <div data-msg="chosen">Chosen company:</div>
+                <div data-msg="change">Change</div>
+                <div data-msg="not_listed">Without register entry we cannot verify your company, but we will gladly answer your message.</div>
+                <div data-msg="register_no">Register number</div>
+                <div data-msg="seat">Seat</div>
+            </div>
+            <script><![CDATA[
+(function () {
+    var root = document.getElementById('bc_contact');
+    if (!root || root.getAttribute('data-ready')) { return; }
+    root.setAttribute('data-ready', '1');
+    var q = function (s) { return root.querySelector(s); };
+    var form = q('.bc-form'), hitsBox = q('.bc-hits'), state = q('.bc-state'), errBox = q('.bc-error');
+    var company = form.elements.company, noReg = form.elements.no_register;
+    var base = root.getAttribute('data-base'), token = '', chosen = '', timer = null, serial = 0;
+
+    function msg(code) {
+        var el = root.querySelector('[data-msg="' + code + '"]');
+        return el ? el.textContent.trim() : code;
+    }
+    function rpc(url, params) {
+        return fetch(base + url, {
+            method: 'POST', headers: {'Content-Type': 'application/json'},
+            body: JSON.stringify({jsonrpc: '2.0', method: 'call', params: params || {}})
+        }).then(function (r) { return r.json(); }).then(function (j) {
+            if (j.error) { throw new Error('rpc'); }
+            return j.result || {};
+        });
+    }
+    function showError(code) {
+        errBox.textContent = code ? msg(code) : '';
+        errBox.hidden = !code;
+    }
+    function loadPuzzle() {
+        form.elements.answer.value = '';
+        return rpc('/puzzle').then(function (res) {
+            token = res.token || '';
+            q('.bc-puzzle-q').textContent = res.question || '…';
+        }).catch(function () { q('.bc-puzzle-q').textContent = '…'; });
+    }
+    function clearHits() {
+        hitsBox.textContent = '';
+        hitsBox.hidden = true;
+    }
+    function setChosen(hit) {
+        chosen = hit ? hit.fnr : '';
+        clearHits();
+        state.textContent = '';
+        if (!hit) { return; }
+        var box = document.createElement('div');
+        box.className = 'alert alert-success py-2 mb-0';
+        var b = document.createElement('strong');
+        b.textContent = hit.name;
+        box.appendChild(document.createTextNode(msg('chosen') + ' '));
+        box.appendChild(b);
+        box.appendChild(document.createTextNode(' (' + hit.label + (hit.seat ? ', ' + hit.seat : '') + ') '));
+        var change = document.createElement('button');
+        change.type = 'button';
+        change.className = 'btn btn-link p-0 align-baseline';
+        change.textContent = msg('change');
+        change.addEventListener('click', function () { setChosen(null); company.focus(); search(); });
+        box.appendChild(change);
+        state.appendChild(box);
+    }
+    function showHits(hits) {
+        clearHits();
+        state.textContent = hits.length ? msg('choose') : msg('no_hits');
+        hits.forEach(function (hit) {
+            var item = document.createElement('button');
+            item.type = 'button';
+            item.className = 'list-group-item list-group-item-action bc-hit';
+            var name = document.createElement('strong');
+            name.textContent = hit.name;
+            var small = document.createElement('div');
+            small.className = 'small text-muted';
+            small.textContent = [hit.label, hit.seat ? msg('seat') + ' ' + hit.seat : '', hit.legal_form].filter(Boolean).join(' · ');
+            item.appendChild(name);
+            item.appendChild(small);
+            item.addEventListener('click', function () { setChosen(hit); });
+            hitsBox.appendChild(item);
+        });
+        hitsBox.hidden = !hits.length;
+    }
+    function search(retry) {
+        var text = company.value.trim(), mine = ++serial;
+        if (chosen || noReg.checked || 3 > text.length) { return; }
+        state.textContent = msg('searching');
+        rpc('/firmensuche', {q: text, token: token}).then(function (res) {
+            if (mine !== serial) { return; }
+            if (res.error === 'puzzle_expired' && !retry) {
+                return loadPuzzle().then(function () { search(true); });
+            }
+            if (res.error) { state.textContent = ''; showError(res.error); return; }
+            showError('');
+            showHits(res.hits || []);
+        }).catch(function () { if (mine === serial) { state.textContent = ''; showError('register_down'); } });
+    }
+    company.addEventListener('input', function () {
+        if (chosen) { setChosen(null); }
+        clearTimeout(timer);
+        clearHits();
+        state.textContent = '';
+        timer = setTimeout(function () { search(); }, 700);
+    });
+    noReg.addEventListener('change', function () {
+        serial++;
+        clearTimeout(timer);
+        setChosen(null);
+        state.textContent = noReg.checked ? msg('not_listed') : '';
+        if (!noReg.checked) { search(); }
+    });
+    q('.bc-new-puzzle').addEventListener('click', loadPuzzle);
+    form.addEventListener('submit', function (ev) {
+        ev.preventDefault();
+        showError('');
+        var el = form.elements;
+        var emailOk = /^[^@\s]+@[^@\s]+\.[^@\s]{2,}$/.test(el.email.value.trim());
+        var code = '';
+        if (!el.first_name.value.trim() || !el.last_name.value.trim() || !company.value.trim()) { code = 'missing_name'; }
+        else if (!chosen && !noReg.checked) { code = 'no_company_choice'; }
+        else if (!emailOk) { code = 'bad_email'; }
+        else if (el.message.value.trim().length < 10) { code = 'message_short'; }
+        else if (!el.consent.checked) { code = 'no_consent'; }
+        else if (!el.answer.value.trim()) { code = 'puzzle_wrong'; }
+        if (code) { showError(code); return; }
+        var button = q('.bc-send');
+        button.disabled = true;
+        rpc('/senden', {
+            first_name: el.first_name.value, last_name: el.last_name.value, company: company.value,
+            fnr: chosen, no_register: noReg.checked, email: el.email.value, phone: el.phone.value,
+            message: el.message.value, consent: el.consent.checked, token: token, answer: el.answer.value,
+            hp: el.hp.value
+        }).then(function (res) {
+            if (res.ok) {
+                form.hidden = true;
+                q('.bc-done').hidden = false;
+                q('.bc-done').scrollIntoView({block: 'center'});
+                return;
+            }
+            showError(res.error || 'failed');
+            if (res.error === 'puzzle_wrong' || res.error === 'puzzle_expired' || res.error === 'too_fast') { return loadPuzzle(); }
+        }).catch(function () { showError('failed'); }).then(function () { button.disabled = false; });
+    });
+    loadPuzzle();
+})();
+            ]]></script>
+        </div>
+    </template>
+</odoo>
